@@ -1,0 +1,15 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="137" height="137" viewBox="0 0 137 137" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="cube" clip-path="url(#clip0_0_4)">
+<path id="Vector" d="M63.9779 1.68574L8.32168 22.5568C3.31797 24.4299 0 29.2463 0 34.5979V94.8297C0 99.6996 2.75605 104.141 7.09082 106.309L62.7471 134.137C66.3594 135.956 70.6139 135.956 74.2262 134.137L129.882 106.309C134.244 104.141 136.973 99.6728 136.973 94.8297V34.5979C136.973 29.2463 133.655 24.4566 128.652 22.5836L72.9953 1.7125C70.1055 0.588672 66.8945 0.588672 63.9779 1.68574ZM68.5 18.3023L119.875 37.568V37.8623L68.5 58.7334L17.125 37.8623V37.568L68.5 18.3023ZM77.0625 113.56V73.7178L119.875 56.3252V92.1539L77.0625 113.56Z" fill="url(#paint0_linear_0_4)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_4" x1="68.4866" y1="0.866254" x2="68.4866" y2="135.502" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F4B400"/>
+<stop offset="0.0001" stop-color="#F4B400" stop-opacity="0.5"/>
+<stop offset="1" stop-color="#DB4437" stop-opacity="0.5"/>
+</linearGradient>
+<clipPath id="clip0_0_4">
+<rect width="137" height="137" fill="white"/>
+</clipPath>
+</defs>
+</svg>

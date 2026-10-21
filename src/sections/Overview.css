@@ -1,0 +1,112 @@
+.overview {
+  display: grid;
+  grid-template-columns: 452px 1fr;
+  column-gap: 85px;
+  align-items: start;
+  padding-top: 0;
+}
+
+.overview__title {
+  font-size: 30px;
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
+.overview__lead {
+  margin-top: 30px;
+  font-size: 20px;
+  color: var(--text-body);
+}
+
+.overview__body {
+  margin-top: 24px;
+  font-size: 17px;
+  color: var(--text-muted);
+}
+
+.overview__social {
+  margin-top: 32px;
+}
+
+.overview__concepts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 304px);
+  row-gap: 30px;
+}
+
+.concept {
+  padding: 15px 20px;
+  border-radius: 12px;
+  transition: background-color 0.25s ease, transform 0.25s var(--ease);
+}
+
+.concept:hover {
+  background: var(--border-soft);
+  transform: translateY(-3px);
+}
+
+.concept__chip {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 25px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.concept__chip--green { background: #dbf4e5; color: #0bb853; }
+.concept__chip--orange { background: #fae4dc; color: #e05119; }
+.concept__chip--blue { background: #dbe5f4; color: #0c50b6; }
+.concept__chip--yellow { background: #fef9dc; color: #e4b419; }
+
+.concept__text {
+  margin-top: 25px;
+  width: 264px;
+  max-width: 100%;
+  font-size: 15px;
+  color: var(--card-text);
+}
+
+@media (max-width: 1180px) {
+  .overview {
+    grid-template-columns: 1fr;
+    row-gap: 48px;
+  }
+  .overview__concepts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 16px;
+  }
+  .concept__text {
+    width: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .overview__title {
+    font-size: 26px;
+  }
+  .overview__lead {
+    font-size: 18px;
+  }
+  .overview__body {
+    font-size: 15px;
+  }
+  .overview__concepts {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+  }
+  .concept {
+    padding-inline: 0;
+  }
+  .concept__chip {
+    font-size: 21px;
+  }
+  .concept__text {
+    margin-top: 14px;
+  }
+}

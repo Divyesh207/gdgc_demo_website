@@ -1,0 +1,41 @@
+.social-buttons {
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-buttons--column {
+  flex-direction: column;
+}
+
+.social-buttons__btn {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background: var(--blue);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+
+.social-buttons__btn:hover {
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 6px 18px rgba(66, 133, 244, 0.45);
+}
+
+/* Icons sit at (12px, 12px) at 25×25 like the Figma layers. */
+.social-buttons__icon {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  width: 25px;
+  height: 25px;
+}
+
+.social-buttons__icon--discord {
+  top: 15px;
+  height: 19px;
+}
