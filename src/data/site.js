@@ -2,18 +2,12 @@
 // Values marked "CONFIGURE" are not available in the Figma file and must be
 // replaced with the chapter's real accounts before going live.
 
-import techAndroid from '../assets/figma/tech-android.png'
-import techWeb from '../assets/figma/tech-web.png'
-import techCloud from '../assets/figma/tech-cloud.png'
-import techMl from '../assets/figma/tech-ml.png'
-import techCyber from '../assets/figma/tech-cyber.png'
-import techCp from '../assets/figma/tech-cp.png'
-import techLightAndroid from '../assets/figma/tech-light-android.webp'
-import techLightWeb from '../assets/figma/tech-light-web.webp'
-import techLightCloud from '../assets/figma/tech-light-cloud.webp'
-import techLightMl from '../assets/figma/tech-light-ml.webp'
-import techLightCyber from '../assets/figma/tech-light-cyber.webp'
-import techLightCp from '../assets/figma/tech-light-cp.webp'
+import techAndroid from '../assets/figma/tech-android.webp'
+import techWeb from '../assets/figma/tech-web.webp'
+import techCloud from '../assets/figma/tech-cloud.webp'
+import techMl from '../assets/figma/tech-ml.webp'
+import techCyber from '../assets/figma/tech-cyber.webp'
+import techCp from '../assets/figma/tech-cp.webp'
 import eventFlutterForward from '../assets/figma/event-flutter-forward.png'
 
 export const site = {
@@ -76,7 +70,6 @@ export const technologies = [
     color: '#14b25f',
     band: '#e7f7ef',
     image: techAndroid,
-    imageLight: techLightAndroid,
     href: 'https://developer.android.com/courses',
     text: "Every year Google developers release exciting new updates to the world's most popular operating system. We always have sessions to keep you updated and mastering the latest trends in modern Android development.",
   },
@@ -87,7 +80,6 @@ export const technologies = [
     color: '#ffb808',
     band: '#fff7e6',
     image: techWeb,
-    imageLight: techLightWeb,
     href: 'https://web.dev/learn',
     text: 'Learn the core foundations of a delightful web experience both for the user and developer. Stay up to tabs with emerging and trending technologies. Get access to a guided, tutorial and hands-on coding experience.',
   },
@@ -98,7 +90,6 @@ export const technologies = [
     color: '#4a90f4',
     band: '#ecf3fd',
     image: techCloud,
-    imageLight: techLightCloud,
     href: 'https://www.cloudskillsboost.google/',
     text: 'For passionate developers who want to stay relevant in a cloud first world where businesses demand for agility and innovation and prompt rise of cloud-native applications to bridges gaps between data, insight, and action.',
   },
@@ -109,7 +100,6 @@ export const technologies = [
     color: '#f74037',
     band: '#feebeb',
     image: techMl,
-    imageLight: techLightMl,
     href: 'https://developers.google.com/machine-learning/crash-course',
     text: 'Learn how to drive user engagement and retention with intelligent apps that are able to effectively serve users what they need without the fuss by providing these systems with the ability to automatically learn and improve from experience without being explicitly programmed.',
   },
@@ -120,7 +110,6 @@ export const technologies = [
     color: '#14b25f',
     band: '#e7f7ef',
     image: techCyber,
-    imageLight: techLightCyber,
     href: 'https://grow.google/certificates/cybersecurity/',
     text: 'With exponential rise in digital world, the attacks are rising more and more. Learn how to keep your applications safe in this world of information technology.',
   },
@@ -131,7 +120,6 @@ export const technologies = [
     color: '#ffb808',
     band: '#fff7e6',
     image: techCp,
-    imageLight: techLightCp,
     href: 'https://codeforces.com/',
     text: 'With ever-increasing competition in the IT industry, learn how to keep your knowledge sharp with competitive programming. It will enhance your problem solving skills, logic and many more.',
   },

@@ -1,10 +1,9 @@
 import { technologies } from '../data/site.js'
-import { useTheme } from '../theme/ThemeContext.jsx'
 import useReveal from '../hooks/useReveal.js'
 import externalLink from '../assets/figma/external-link.svg'
 import './Technologies.css'
 
-function TechRow({ tech, index, theme }) {
+function TechRow({ tech, index }) {
   const ref = useReveal()
   const imageFirst = index % 2 === 0
   return (
@@ -15,12 +14,7 @@ function TechRow({ tech, index, theme }) {
     >
       <div className="tech__inner">
         <div className="tech__media">
-          <img
-            src={theme === 'dark' ? tech.image : tech.imageLight}
-            alt=""
-            loading="lazy"
-            className={`tech__img tech__img--${tech.id}`}
-          />
+          <img src={tech.image} alt="" loading="lazy" className={`tech__img tech__img--${tech.id}`} />
         </div>
         <div className="tech__copy">
           <h3 className="tech__title">
@@ -36,7 +30,7 @@ function TechRow({ tech, index, theme }) {
             aria-label={`Codelabs for ${tech.accent.toLowerCase()}${tech.rest.toLowerCase()} (opens in a new tab)`}
           >
             CODELABS
-            <img src={externalLink} width="15" height="15" alt="" />
+            <img src={externalLink} width="20" height="20" alt="" />
           </a>
         </div>
       </div>
@@ -44,13 +38,12 @@ function TechRow({ tech, index, theme }) {
   )
 }
 
-// Figma "Technologies" (dark 1:1003, light 1:557–1:715).
+// Figma "Technologies" light layout (1:557–1:715): full-bleed colour bands with
+// animated illustrations. Dark theme uses the same layout with dark-tinted bands.
 export default function Technologies() {
-  const { theme } = useTheme()
   const headRef = useReveal()
   return (
     <section className="technologies" id="technologies" aria-labelledby="tech-title">
-      <h2 className="technologies__kicker section-title">Opportunities with GDSC</h2>
       <header className="technologies__head reveal" ref={headRef}>
         <h2 id="tech-title" className="technologies__title">
           Technologies We Are Excited About
@@ -59,7 +52,7 @@ export default function Technologies() {
       </header>
       <ul className="technologies__list">
         {technologies.map((t, i) => (
-          <TechRow key={t.id} tech={t} index={i} theme={theme} />
+          <TechRow key={t.id} tech={t} index={i} />
         ))}
       </ul>
     </section>
