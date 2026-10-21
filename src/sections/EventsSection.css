@@ -1,0 +1,68 @@
+.events-section {
+  width: min(1039px, 100% - 2 * var(--gutter));
+  margin: 180px auto 0;
+  padding-top: 31px;
+}
+
+.events-section__stats {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: clamp(32px, 10vw, 150px);
+  text-align: center;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  color: var(--text);
+}
+
+.stat__value {
+  font-size: clamp(36px, 3.5vw, 50px);
+}
+
+.stat__label {
+  font-size: clamp(18px, 2vw, 30px);
+}
+
+.events-section__block {
+  margin-top: 112px;
+}
+
+.events-section__subtitle {
+  text-align: center;
+  font-size: clamp(22px, 2vw, 30px);
+  color: var(--text);
+}
+
+/* 3 × 300px columns with 45px gaps, left-aligned like the Figma frame (cards start at x=23). */
+.events-section__grid {
+  margin-top: 74px;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 45px;
+  justify-content: center;
+}
+
+@media (max-width: 1080px) {
+  .events-section__grid {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+
+@media (max-width: 700px) {
+  .events-section {
+    margin-top: 110px;
+  }
+  .events-section__block {
+    margin-top: 72px;
+  }
+  .events-section__grid {
+    grid-template-columns: minmax(0, 300px);
+    gap: 28px;
+    margin-top: 36px;
+  }
+}

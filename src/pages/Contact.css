@@ -1,0 +1,220 @@
+/* Figma frame is 1440 wide; offsets below are from that frame (nav ≈ 0–100). */
+.contact-page {
+  font-family: var(--font-sans);
+  overflow: hidden;
+}
+
+.contact {
+  position: relative;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding: 92px 0 0;
+}
+
+.contact__head {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding-inline: var(--gutter);
+}
+
+.contact__kicker {
+  font-size: clamp(26px, 2.8vw, 40px);
+  font-weight: 400;
+  color: var(--blue);
+}
+
+.contact__title {
+  font-size: clamp(48px, 6.25vw, 90px);
+  font-weight: 700;
+  color: var(--page-heading);
+  line-height: 1.2;
+}
+
+.g-red { color: var(--red); }
+.g-green { color: var(--green); }
+.g-yellow { color: var(--yellow); }
+.g-blue { color: var(--blue); }
+
+.contact__lead {
+  max-width: 660px;
+  margin: 12px auto 0;
+  font-size: clamp(16px, 1.4vw, 20px);
+  font-weight: 400;
+  color: var(--page-heading);
+}
+
+.contact__stage {
+  position: relative;
+  margin-top: -167px;
+  min-height: 763px;
+  padding: 192px 0 0 69px;
+}
+
+.contact__union {
+  position: absolute;
+  left: 39px;
+  top: 0;
+  width: calc(100% - 57px);
+  height: 763px;
+  max-width: none;
+}
+
+.contact__card {
+  position: relative;
+  z-index: 1;
+  width: 626px;
+  max-width: 100%;
+  min-height: 533px;
+  padding: 42px 64px 34px;
+  background: #fffefe;
+  border-radius: 52px;
+  box-shadow: 7px -7px 4px rgba(0, 0, 0, 0.25);
+  animation: card-in 0.8s var(--ease) both;
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
+.contact__woman {
+  position: absolute;
+  z-index: 1;
+  left: 913px;
+  top: 216px;
+  width: 527px;
+  height: 527px;
+  animation: woman-float 6s ease-in-out infinite;
+}
+
+@keyframes woman-float {
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.sponsor {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--gutter) 160px;
+  min-height: 420px;
+  text-align: center;
+}
+
+.sponsor__title {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(48px, 6.25vw, 90px);
+  font-weight: 700;
+  color: var(--page-heading);
+}
+
+.sponsor__text {
+  position: relative;
+  z-index: 1;
+  max-width: 1005px;
+  margin: 22px auto 0;
+  font-size: clamp(16px, 1.4vw, 20px);
+  font-weight: 400;
+  color: var(--page-heading);
+}
+
+.sponsor__btn {
+  position: relative;
+  z-index: 1;
+  margin-top: 66px;
+  width: 281px;
+  height: 72px;
+  border-radius: 11px;
+  font: 700 36px var(--font-sans);
+}
+
+.sponsor__circle {
+  position: absolute;
+  width: 321px;
+  height: 321px;
+}
+
+.sponsor__circle--green {
+  left: -161px;
+  top: 137px;
+}
+
+.sponsor__circle--yellow {
+  right: -56px;
+  top: 158px;
+}
+
+@media (max-width: 1400px) {
+  .contact__woman {
+    left: auto;
+    right: 20px;
+    width: clamp(300px, 34vw, 527px);
+    height: auto;
+    top: 260px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .contact__stage {
+    margin-top: 32px;
+    padding: 40px var(--gutter) 0;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact__union {
+    left: var(--gutter);
+    width: calc(100% - 2 * var(--gutter));
+    height: 100%;
+    object-fit: fill;
+  }
+  .contact__card {
+    width: min(626px, 100%);
+  }
+  .contact__woman {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: min(360px, 80%);
+    margin: 16px 0 24px;
+  }
+  .sponsor {
+    padding-top: 72px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact {
+    padding-top: 56px;
+  }
+  .contact__card {
+    padding: 28px 22px 24px;
+    border-radius: 32px;
+    min-height: 0;
+  }
+  .sponsor__btn {
+    width: 220px;
+    height: 58px;
+    font-size: 28px;
+  }
+  .sponsor__circle {
+    width: 180px;
+    height: 180px;
+  }
+  .sponsor__circle--green {
+    left: -100px;
+    top: auto;
+    bottom: 10px;
+  }
+  .sponsor__circle--yellow {
+    right: -90px;
+    top: auto;
+    bottom: 0;
+  }
+}

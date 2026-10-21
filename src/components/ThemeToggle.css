@@ -1,0 +1,26 @@
+.theme-toggle {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  flex: none;
+  padding: 0;
+  background: transparent;
+  border: 3px solid var(--text);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s var(--ease), background-color 0.2s ease;
+}
+
+/* Icon offset matches the Figma "moon" layer (left 5px, top 4px inside the border box). */
+.theme-toggle img {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+  width: 19px;
+  height: 20px;
+}
+
+.theme-toggle:hover {
+  transform: rotate(-20deg);
+  background: var(--border-soft);
+}

@@ -1,0 +1,266 @@
+/* Figma "Desktop - 4" (1440 wide). Positions are measured from the frame top; the nav occupies the first ~90px. */
+.events-page {
+  position: relative;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding: 79px var(--gutter) 40px;
+  font-family: var(--font-sans);
+  overflow: hidden;
+}
+
+.events-page__sprinkle {
+  position: absolute;
+  width: 283px;
+  height: 249px;
+  overflow: hidden;
+  opacity: 0.67;
+  pointer-events: none;
+}
+
+/* Same crop as the Figma "right Sprinkle" image fill. */
+.events-page__sprinkle img {
+  position: absolute;
+  left: -151.82%;
+  top: -19%;
+  width: 303.88%;
+  height: 346.34%;
+  max-width: none;
+}
+
+.events-page__sprinkle--left {
+  left: -40px;
+  top: 30px;
+  transform: rotate(15.94deg);
+}
+
+.events-page__sprinkle--right {
+  right: -20px;
+  top: 100px;
+  transform: rotate(-175.5deg);
+}
+
+.events-page__title {
+  position: relative;
+  text-align: center;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 700;
+  color: var(--page-heading);
+}
+
+.events-page__title span {
+  color: var(--blue);
+}
+
+.events-page__stats {
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: clamp(28px, 9vw, 134px);
+}
+
+.ev-stat {
+  gap: 4px;
+  font-weight: 700;
+}
+
+.ev-stat .stat__value {
+  font-size: clamp(48px, 7vw, 100px);
+  color: var(--page-heading);
+}
+
+.ev-stat .stat__label {
+  font-size: clamp(20px, 2.4vw, 35px);
+}
+
+.ev-stat--red .stat__label { color: var(--red); }
+.ev-stat--green .stat__label { color: var(--green); }
+.ev-stat--yellow .stat__label { color: var(--yellow); }
+
+.events-page__heading {
+  text-align: center;
+  font-size: clamp(26px, 3vw, 40px);
+  font-weight: 700;
+  color: var(--page-heading);
+}
+
+.events-page__upcoming {
+  width: min(1039px, 100%);
+  margin: 84px auto 0;
+}
+
+.events-page__upcoming-list {
+  list-style: none;
+  margin: 39px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.ev-up {
+  width: 316px;
+  max-width: 100%;
+  padding: 27px 28px 37px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #7c7373;
+  border-radius: 18px;
+  font-family: var(--font-rounded);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+.ev-up:hover,
+.ev-prev__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15);
+}
+
+.ev-up__img {
+  width: 258px;
+  height: 257px;
+  object-fit: cover;
+}
+
+.ev-up__title {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #000;
+}
+
+.ev-up__date {
+  margin-top: 8px;
+  font-size: 15px;
+  color: #8c8c8c;
+}
+
+.ev-up__btn {
+  margin-top: 23px;
+  width: 137px;
+  height: 44px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.events-page__previous {
+  margin-top: 59px;
+}
+
+.events-page__grid {
+  list-style: none;
+  margin: 110px auto 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 230px);
+  justify-content: center;
+  column-gap: 112px;
+  row-gap: 74px;
+}
+
+.ev-prev {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.ev-prev__card {
+  width: 230px;
+  height: 329px;
+  padding: 20px 21px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #7c7373;
+  border-radius: 18px;
+  font-family: var(--font-rounded);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+.ev-prev__img {
+  width: 188px;
+  height: 187px;
+  object-fit: cover;
+}
+
+.ev-prev__title {
+  margin-top: 8px;
+  font-size: 18px;
+  color: #000;
+}
+
+.ev-prev__date {
+  margin-top: 0;
+  font-size: 10px;
+  color: #8c8c8c;
+}
+
+.ev-prev__btn {
+  margin-top: 16px;
+  width: 100px;
+  height: 32px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.ev-badge {
+  position: relative;
+  display: block;
+  width: 68px;
+  height: 68px;
+  flex: none;
+  transition: transform 0.4s var(--ease);
+}
+
+.ev-prev:hover .ev-badge {
+  transform: rotate(360deg);
+}
+
+.ev-badge > img:first-child {
+  width: 68px;
+  height: 68px;
+}
+
+.ev-badge__logo {
+  position: absolute;
+  object-fit: cover;
+}
+
+.ev-badge__logo--flutter {
+  left: 2px;
+  top: 5px;
+  width: 57px;
+  height: 57px;
+}
+
+.ev-badge__logo--compose {
+  left: 4px;
+  top: 5px;
+  width: 59px;
+  height: 58px;
+}
+
+@media (max-width: 1000px) {
+  .events-page__grid {
+    grid-template-columns: repeat(2, 230px);
+    column-gap: 64px;
+  }
+}
+
+@media (max-width: 640px) {
+  .events-page__sprinkle {
+    width: 150px;
+    height: 132px;
+  }
+  .events-page__upcoming-list {
+    justify-content: center;
+  }
+  .events-page__grid {
+    grid-template-columns: minmax(0, 230px);
+    margin-top: 48px;
+    row-gap: 48px;
+  }
+}
